@@ -20,6 +20,7 @@ fs.readFile 'config.yml', "utf8", (e, data) ->
 
       bot.on '^!out (.*)', (reason, speaker) ->
         this.speak "Have fun, #{speaker.name}"
+        this.campfire.announce "#{speaker.name} is out: #{reason}"
         users_out[speaker.id] = reason
 
       # PT story link
@@ -42,7 +43,9 @@ fs.readFile 'config.yml', "utf8", (e, data) ->
         
       bot.on 'catchAll', (rawMessage, speaker) ->
         if users_out[speaker.id]
-          this.speak "#{speaker.name} is back from: #{users_out[speaker.id]}"
+          this.speak "Welcome back, #{speaker.name}"
+          this.campfire.announce "#{speaker.name} is back from: #{users_out[speaker.id]}"
+          
           users_out[speaker.id] = null
 
         # this.speak(rawMessage.body.split(" ").reverse.join(" "))
