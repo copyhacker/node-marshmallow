@@ -1,3 +1,0 @@
-[submodule "vendor/campfire"]
-	path = vendor/campfire
-	url = git@github.com:copyhacker/node-campfire.git
