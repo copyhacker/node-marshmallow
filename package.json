@@ -2,6 +2,6 @@
   "name": "node-marshmallow",
   "version": "0.0.1",
   "dependencies": {
-    "yaml": "0.2.1",
+    "yaml": "0.2.1"
   }
 }
