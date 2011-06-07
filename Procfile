@@ -1,1 +1,1 @@
-web: node crankybot.js
+worker: node crankybot.js
